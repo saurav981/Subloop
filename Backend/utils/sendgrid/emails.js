@@ -11,27 +11,6 @@ require('dotenv').config();
 
 const sender = { name: 'Subloop', email: 'subloopapp@gmail.com' };
 
-exports.sendWelcomeEmail = async (username, email) => {
-  const recipient = [{ email }];
-
-  // Template ID: d-7989385fbd0a4f39b6aa495f68a36ccb
-  try {
-    const response = await sgMail.send({
-      from: sender,
-      to: recipient,
-      templateId: 'd-7989385fbd0a4f39b6aa495f68a36ccb',
-      dynamicTemplateData: { username: username },
-    });
-
-    console.log('Welcome email sent successfully');
-
-    // console.log('Welcome email sent successfully', response);
-  } catch (error) {
-    console.log(error);
-    throw new Error(`Error sending Welcome email: ${error}`);
-  }
-};
-
 exports.sendVerificationEmail = async (email, verificationCode) => {
   const recipient = [{ email }];
 
@@ -53,6 +32,27 @@ exports.sendVerificationEmail = async (email, verificationCode) => {
   } catch (error) {
     console.log(error);
     throw new Error(`Error sending verification email: ${error}`);
+  }
+};
+
+exports.sendWelcomeEmail = async (username, email) => {
+  const recipient = [{ email }];
+
+  // Template ID: d-7989385fbd0a4f39b6aa495f68a36ccb
+  try {
+    const response = await sgMail.send({
+      from: sender,
+      to: recipient,
+      templateId: 'd-7989385fbd0a4f39b6aa495f68a36ccb',
+      dynamicTemplateData: { username: username },
+    });
+
+    console.log('Welcome email sent successfully');
+
+    // console.log('Welcome email sent successfully', response);
+  } catch (error) {
+    console.log(error);
+    throw new Error(`Error sending Welcome email: ${error}`);
   }
 };
 

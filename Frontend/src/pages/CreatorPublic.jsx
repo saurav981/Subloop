@@ -5,6 +5,7 @@ import { Minus, Plus } from 'lucide-react';
 // import { loadStripe } from '@stripe/stripe-js';
 // import toast from 'react-hot-toast';
 import axios from 'axios';
+import avatar from '../assets/avatar.webp';
 
 const backend_url = import.meta.env.VITE_BACKEND_URL;
 
@@ -72,9 +73,8 @@ export const CreatorPublic = () => {
         <div className="flex -mx-[5rem] h-full">
           <div className="h-screen w-1/3 bg-base-200  p-10 pt-14">
             <img
-              src={publicUser?.profilePic}
-              alt="profile pic"
-              className="rounded-full max-size-48 object-cover"
+              src={publicUser?.profilePic || avatar}
+              className="rounded-full w-48 object-cover"
             />
             <p className="text-3xl font-bold mt-8">{publicUser?.fullName}</p>
             <p className="mt-4">{publicUser?.bio}</p>
@@ -94,7 +94,7 @@ export const CreatorPublic = () => {
                     <li>Available slots: {plan.maxFanLimit}</li>
                     <li>Replies within: {plan.maxReplyTimeInDays} days</li>
                     {plan.planName === 'Per Message' && (
-                      <li>Per message price: ₹5</li>
+                      <li>Per message price: ₹{plan.price}</li>
                     )}
                     {plan.planName === 'Per Message' && (
                       <li>

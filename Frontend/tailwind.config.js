@@ -20,10 +20,10 @@ export default {
           secondary: '#F3F4F6',
           accent: '#22D3EE',
           neutral: '#212121', // Background color
-          'base-100': 'hsl(0, 0%, 5%)', // Background
+          'base-100': 'hsl(0, 0%, 9%)', // Background
           // 'base-100': 'hsl(300, 3%, 6%)', // Background, v2
           'base-200': '#2A2A2A', // Slightly lighter background for cards
-          'base-content': 'hsl(0, 0%, 95%)', // Text color
+          'base-content': 'hsl(0, 0%, 96%)', // Text color
         },
       },
       'light', // Keep default light theme

@@ -24,16 +24,18 @@ export const Navbar = () => {
             </Link>
           </ul>
         ) : (
-          <div className="flex items-center justify-between gap-2.5">
-            {user && (
-              <div className="flex justify-center items-center text-sm px-2 py-1.5 rounded bg-base-200 border border-color-30">
-                {user.fullName?.split(' ')[0] || user?.username}
+          <>
+            {user.isVerified && (
+              <div className="flex items-center justify-between gap-2.5">
+                <div className="flex justify-center items-center text-sm px-2 py-1.5 rounded bg-base-200 border border-color-30">
+                  {user.fullName?.split(' ')[0] || user?.username}
+                </div>
+                <Link to={'/dashboard'} className="nav-btn hover:bg-base-200">
+                  Dashboard
+                </Link>
               </div>
             )}
-            <Link to={'/dashboard'} className="nav-btn hover:bg-base-200">
-              Dashboard
-            </Link>
-          </div>
+          </>
         )}
 
         <ThemeToggle />
