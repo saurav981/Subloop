@@ -15,6 +15,7 @@ export const Home = () => {
           to {import.meta.env.VITE_APP_NAME} 👋
         </h1>
         <p>Send direct messages to fav influencers</p>
+        <p>without waiting for eternity</p>
         <Link to={'/signup'} className="btn-fit mt-4 text-lg">
           {!isAuthenticated ? 'Get started' : 'Go to Dashboard'}
         </Link>
