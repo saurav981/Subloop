@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { MdArrowDropDown } from 'react-icons/md';
-import { IoMdArrowDropup } from 'react-icons/io';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import {
   House,
   CircleUserRound,
@@ -13,10 +12,8 @@ import {
   KeyRound,
   Trash2,
 } from 'lucide-react';
-import { useChatStore } from '../store/chatStore';
 
 export const LeftSideBar = () => {
-  const { selectedUser } = useChatStore();
   const location = useLocation();
   const [activeItem, setActiveItem] = useState(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -129,17 +126,14 @@ export const LeftSideBar = () => {
   }, [location.pathname]);
 
   return (
-    <div>
-      {/* {!selectedUser && ( */}
-      {true && (
-        <aside className="flex md:border-none border-t border-color-50">
-          <div className="flex md:flex-col md:py-4 flex-1">
-            {menuItems.map((item) => (
-              <div key={item.id} className="mb-1 mx-3">
-                <Link
-                  to={item.hasSubmenu ? '#' : item.url}
-                  onClick={() => handleMenuClick(item)}
-                  className={`
+    <aside className="flex md:border-none border-t border-color-50">
+      <div className="flex md:flex-col md:py-4 flex-1">
+        {menuItems.map((item) => (
+          <div key={item.id} className="mb-1 mx-3">
+            <Link
+              to={item.hasSubmenu ? '#' : item.url}
+              onClick={() => handleMenuClick(item)}
+              className={`
                 flex items-center gap-3 px-4 h-12 rounded-md
                 transition-colors
                 ${
@@ -148,29 +142,29 @@ export const LeftSideBar = () => {
                     : 'hover:bg-base-200'
                 }
               `}
-                >
-                  <item.icon className="size-5 mx-auto" />
-                  <span className="flex-1 hidden md:block">{item.label}</span>
-                  {item.hasSubmenu && (
-                    <span className="text-gray-400">
-                      {isSettingsOpen ? (
-                        <IoMdArrowDropup className="size-5" />
-                      ) : (
-                        <MdArrowDropDown className="size-5" />
-                      )}
-                    </span>
+            >
+              <item.icon className="size-5 mx-auto" />
+              <span className="flex-1 hidden md:block">{item.label}</span>
+              {item.hasSubmenu && (
+                <span className="text-gray-400">
+                  {isSettingsOpen ? (
+                    <ChevronUp className="size-5" />
+                  ) : (
+                    <ChevronDown className="size-5" />
                   )}
-                </Link>
+                </span>
+              )}
+            </Link>
 
-                {/* Submenu */}
-                {item.hasSubmenu && isSettingsOpen && (
-                  <div className="mt-1 ml-3 space-y-1">
-                    {item.submenus.map((subItem) => (
-                      <Link
-                        key={subItem.id}
-                        to={subItem.url}
-                        onClick={() => handleSubmenuClick(subItem)}
-                        className={`flex gap-2 items-center
+            {/* Submenu */}
+            {item.hasSubmenu && isSettingsOpen && (
+              <div className="mt-1 ml-3 space-y-1">
+                {item.submenus.map((subItem) => (
+                  <Link
+                    key={subItem.id}
+                    to={subItem.url}
+                    onClick={() => handleSubmenuClick(subItem)}
+                    className={`flex gap-2 items-center
                       px-4 py-2 rounded-md text-sm
                       transition-colors duration-200
                       ${
@@ -179,21 +173,19 @@ export const LeftSideBar = () => {
                           : 'hover:bg-base-200'
                       }
                     `}
-                      >
-                        <subItem.icon className="size-4" />
-                        <span className="flex-1 hidden lg:block">
-                          {subItem.label}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                  >
+                    <subItem.icon className="size-4" />
+                    <span className="flex-1 hidden lg:block">
+                      {subItem.label}
+                    </span>
+                  </Link>
+                ))}
               </div>
-            ))}
+            )}
           </div>
-        </aside>
-      )}
-    </div>
+        ))}
+      </div>
+    </aside>
   );
 };
 

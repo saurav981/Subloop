@@ -24,7 +24,6 @@
     "jsonwebtoken": "^9.0.2",
     "mailtrap": "^3.4.0",
     "mongoose": "^8.8.0",
-    "morgan": "^1.10.0",
     "razorpay": "^2.9.5",
     "socket.io": "^4.8.1",
     "stripe": "^17.4.0",
