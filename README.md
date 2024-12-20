@@ -2,15 +2,11 @@
 
 A full-stack MERN app that connects creators with fans through one time payment and chat. This is specifically for micro influencers with 1-10k followers, who usually don't get sponsors/deal, hence less monetization options. And stats show, 49% of Instagram accounts have followers between 1-10k, and India alone has 362.9 million monthly active, which is a big market. Creators can 90% of the revenue, can may motivate them to share the Subloop profile link on socials, and help us grow organically. Because if creators make money, so do we. But if they don't, they don't have pay any fees.
 
-
-
 ## Problem it solves
 
 1. Creators can make money for their efforts/service
 2. Super fans can directly chat with creators they love
 3. Eliminates low quality messages, because fans who pay are usually quality fans
-
-
 
 ## Features
 
@@ -20,7 +16,7 @@ A full-stack MERN app that connects creators with fans through one time payment 
 
 3. Payment- Integrated Razorpay for easy payment with options like UPI, credit/debit card, net banking and more.
 
-   **Note-** My Razorpay isn't approved yet, it got stuck in KYC, hence payment is not working in production. 
+   **Note-** My Razorpay isn't approved yet, it got stuck in KYC, hence payment is not working in production.
 
    Reason for using Razorpay is the UPI option, earlier I'd used Stripe, but Stripe doesn't have UPI yet. Might switch to Paytm is Razorpay doesn't respond.
 
@@ -29,8 +25,6 @@ A full-stack MERN app that connects creators with fans through one time payment 
 5. Responsive- Fully responsive for all devices.
 
 6. Email notification- on signup, verify email, forget password, and reset password link
-
-
 
 ## Tech Stack
 
@@ -42,13 +36,11 @@ A full-stack MERN app that connects creators with fans through one time payment 
 6. Email- SendGrid for ease of use and no domain linkage required, before was using Mailtrap
 7. Deploy- Render dot com
 
-
-
 ## Usage
 
 1. You can visit [live app](https://subloop-frontend.onrender.com/) to try it out.
 2. Or you can check the [demo video](https://youtu.be/9SHkXQzMqik) as well.
 
-
-
 Hope you like it, thank you!
+
+Would appreciate any feedback!
