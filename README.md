@@ -34,7 +34,8 @@ A full-stack MERN app that connects creators with fans through one time payment 
 4. Authentication: JWT and cookies for better security
 5. Payments: Razorpay for UPI option
 6. Email- SendGrid for ease of use and no domain linkage required, before was using Mailtrap
-7. Deploy- Render dot com
+7. State Management- Zustand
+8. Deployed on Render .com
 
 ## Usage
 
