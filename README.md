@@ -36,6 +36,7 @@ A full-stack MERN app that connects creators with fans through one time payment 
 6. Email- SendGrid for ease of use and no domain linkage required, before was using Mailtrap
 7. State Management- Zustand
 8. Deployed on Render .com
+9. File upload- Cloudinary
 
 ## Usage
 
