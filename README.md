@@ -2,6 +2,11 @@
 
 A full-stack MERN app that connects creators with fans through one time payment and chat. This is specifically for micro influencers with 1-10k followers, who usually don't get sponsors/deal, hence less monetization options. And stats show, 49% of Instagram accounts have followers between 1-10k, and India alone has 362.9 million monthly active users, which is a big market. Creators can earn 90% of the revenue, which may motivate them to share their Subloop profile link on socials, and help us grow organically. Because if creators make money, so do we. But if they don't, they don't have to pay any fees.
 
+## Deployed links
+
+1. Please visit [live app](https://subloop-frontend.onrender.com/) to try it out.
+2. Or you can check the [demo video](https://youtu.be/9SHkXQzMqik) as well.
+
 ## Problem it solves
 
 1. Creators can make money for their efforts/service
@@ -37,11 +42,6 @@ A full-stack MERN app that connects creators with fans through one time payment 
 7. State Management- Zustand
 8. Deployed on Render .com
 9. File upload- Cloudinary
-
-## Usage
-
-1. You can visit [live app](https://subloop-frontend.onrender.com/) to try it out.
-2. Or you can check the [demo video](https://youtu.be/9SHkXQzMqik) as well.
 
 Hope you like it, thank you!
 
