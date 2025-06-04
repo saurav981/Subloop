@@ -24,7 +24,7 @@
   */
 
   .main-container {
-    @apply lg:px-20 max-w-[90rem] mx-auto;
+    @apply lg:px-20 max-w-[80rem] mx-auto;
   }
 
   .border-color-30 {

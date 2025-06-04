@@ -31,7 +31,7 @@ import { Plans } from './pages/Dashboard/Plans';
 import { CreatorPublic } from './pages/CreatorPublic';
 import { Success } from './pages/Payment/Success';
 
-// Protect routes: If user tries to goto any protected route, redirect to Login page
+// Protect routes: If non-logged user tries to goto any protected route, redirect to Login page
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, user } = useAuthStore();
   if (!isAuthenticated) {

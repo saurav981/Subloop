@@ -39,7 +39,7 @@ app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 // Rate limit
 const limiter = rateLimit({
   max: 400,
-  windowMs: 60 * 60 * 1000,
+  windowMs: 60 * 60 * 1000, // 1 hour
   message: 'Too many request from this IP, please try again in an hour!',
 });
 
@@ -62,6 +62,9 @@ app.use('/api/v1/purchases', purchaseRouter);
 app.use('/api/v1/getkey', (req, res) => {
   res.status(200).json({ key: process.env.RAZORPAY_KEY_ID });
 });
+
+// ping this every 10 minutes using UptimeRobot to keep server alive, and avoid cold start
+app.get('/health', (req, res) => res.sendStatus(200));
 
 // Handle undefined routes
 app.all('*', (req, res, next) => {

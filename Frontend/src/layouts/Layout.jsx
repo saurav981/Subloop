@@ -9,6 +9,7 @@ export const Layout = () => {
           <Navbar />
         </div>
       </div>
+
       <main className="main-container">
         <Outlet />
       </main>

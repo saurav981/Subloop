@@ -33,6 +33,7 @@ export const Plans = () => {
               ))}
             </tr>
           </thead>
+
           <tbody>
             {user.plans?.map((item, i) => (
               <tr

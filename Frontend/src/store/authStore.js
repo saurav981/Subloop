@@ -227,7 +227,7 @@ export const useAuthStore = create((set, get) => ({
         profileData
       );
 
-      // Update state atomically to prevent multiple renders
+      // Update state automatically to prevent multiple renders
       set({
         user: data.updatedUser,
         isLoading: false,
