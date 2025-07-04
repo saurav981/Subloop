@@ -103,7 +103,9 @@ export const CreatorPublic = () => {
                           <div className="flex gap-1 items-center justify-center input-box w-fit p-0.5">
                             <div
                               className="increase-decrease-btn"
-                              onClick={() => setQuantity(quantity - 1)}
+                              onClick={() =>
+                                quantity > 1 && setQuantity(quantity - 1)
+                              }
                             >
                               <Minus />
                             </div>

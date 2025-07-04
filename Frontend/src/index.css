@@ -28,7 +28,7 @@
   }
 
   .border-color-30 {
-    @apply border-gray-500/30;
+    @apply border-gray-500/20;
   }
 
   .border-color-50 {
