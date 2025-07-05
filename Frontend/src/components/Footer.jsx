@@ -77,7 +77,7 @@ export const Footer = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-primary text-white dark:text-black shadow-lg hover:shadow-xl hover:scale-110 transition"
+          className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 p-2 sm:p-3 rounded-full bg-primary text-black/80 shadow-lg hover:shadow-xl hover:scale-110 transition"
           aria-label="Scroll to top"
         >
           <ArrowUp size={18} />

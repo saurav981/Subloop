@@ -193,7 +193,7 @@ export const Home = () => {
             )}
 
             {/* Main Headline */}
-            <h1 className="text-[2.5rem] md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up">
+            <h1 className="text-[2.5rem] md:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
               Monetize Your
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {' '}
@@ -203,7 +203,7 @@ export const Home = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-base-content/70 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
+            <p className="text-lg px-1 text-base-content/70 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
               Join the platform built for creators with 1-10K followers. Connect
               with fans, earn 90% revenue, and grow your community without brand
               deals.
@@ -213,13 +213,13 @@ export const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up delay-300">
               <a
                 href={isAuthenticated ? '/dashboard' : '/signup'}
-                className="btn btn-primary btn-lg text-lg px-8 group hover:scale-105 transition-transform"
+                className="btn btn-primary text-base px-6 group hover:scale-105 transition-transform"
               >
                 {isAuthenticated ? 'Go to Dashboard' : 'Start Earning Now'}
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <button className="btn btn-outline btn-lg text-lg px-8 hover:scale-105 transition-transform">
+              <button className="btn btn-outline text-base px-6 hover:scale-105 transition-transform">
                 See How It Works
               </button>
             </div>
@@ -246,7 +246,7 @@ export const Home = () => {
       {/* Stats Section */}
       <section className="py-16 bg-base-200/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -267,10 +267,10 @@ export const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-[2.5rem] font-bold mb-4">
               Built for Nano Influencers
             </h2>
-            <p className="text-xl text-base-content/70 max-w-3xl mx-auto">
+            <p className="text-lg text-base-content/70 max-w-3xl mx-auto">
               While others chase celebrity influencers, we focus on you - the
               authentic creators with engaged communities of 1-10K followers.
             </p>
@@ -299,10 +299,10 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-[2.5rem] font-bold mb-4">
                 Turn Your Followers Into Income
               </h2>
-              <p className="text-xl text-base-content/70">
+              <p className="text-lg text-base-content/70">
                 Start monetizing your content today with the platform designed
                 for nano influencers
               </p>
@@ -345,10 +345,10 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-[2.5rem] font-bold mb-4">
                 The Problem Nano Influencers Face
               </h2>
-              <p className="text-xl text-base-content/70 max-w-3xl mx-auto">
+              <p className="text-lg max-sm:px-3 text-base-content/70 max-w-3xl mx-auto">
                 49% of Instagram accounts have 1-10K followers, yet they're
                 ignored by brands. With 362.9M users in India alone, that's a
                 massive untapped market.
@@ -364,10 +364,10 @@ export const Home = () => {
                 >
                   <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                     <div className="p-8 bg-error/10 rounded-2xl border-l-4 border-error">
-                      <h3 className="text-2xl font-bold text-error mb-4">
+                      <h3 className="text-xl font-bold text-error mb-4">
                         Problem
                       </h3>
-                      <p className="text-lg text-base-content/80">
+                      <p className="text-base text-base-content/80">
                         {item.problem}
                       </p>
                     </div>
@@ -375,10 +375,10 @@ export const Home = () => {
 
                   <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
                     <div className="p-8 bg-success/10 rounded-2xl border-l-4 border-success">
-                      <h3 className="text-2xl font-bold text-success mb-4">
+                      <h3 className="text-xl font-bold text-success mb-4">
                         Solution
                       </h3>
-                      <p className="text-lg text-base-content/80">
+                      <p className="text-base text-base-content/80">
                         {item.solution}
                       </p>
                     </div>
@@ -395,18 +395,18 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-[2.5rem] font-bold mb-4">
                 How {appName} Works
               </h2>
-              <p className="text-xl text-base-content/70">
+              <p className="text-lg text-base-content/70">
                 Simple, transparent, and designed to help creators succeed
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 relative">
               {/* Connection lines */}
-              <div className="hidden md:block absolute top-1/2 left-1/3 w-1/3 h-0.5 bg-primary/30 -translate-y-1/2" />
-              <div className="hidden md:block absolute top-1/2 right-1/3 w-1/3 h-0.5 bg-primary/30 -translate-y-1/2" />
+              {/* <div className="hidden md:block absolute top-1/2 left-1/3 w-1/3 h-0.5 bg-primary/30 -translate-y-1/2" />
+              <div className="hidden md:block absolute top-1/2 right-1/3 w-1/3 h-0.5 bg-primary/30 -translate-y-1/2" /> */}
 
               {howItWorks.map((step, index) => (
                 <div
@@ -415,7 +415,7 @@ export const Home = () => {
                   style={{ animationDelay: `${index * 300}ms` }}
                 >
                   {/* Step number */}
-                  <div className="w-16 h-16 bg-primary text-primary-content rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+                  <div className="size-14 bg-primary text-primary-content rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-6 shadow-lg">
                     {step.step}
                   </div>
 
@@ -440,10 +440,10 @@ export const Home = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                <h2 className="text-3xl md:text-[2.5rem] font-bold mb-6 max-sm:text-center">
                   Massive Market Opportunity
                 </h2>
-                <p className="text-xl text-base-content/70 mb-8">
+                <p className="text-lg text-base-content/70 mb-11 max-sm:text-center">
                   India's social media landscape is booming, and nano
                   influencers represent the largest untapped segment for
                   authentic brand connections.
@@ -541,10 +541,10 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-[2.5rem] font-bold mb-4">
                 Real Creators, Real Results
               </h2>
-              <p className="text-xl text-base-content/70">
+              <p className="text-lg text-base-content/70">
                 See how nano influencers are transforming their passion into
                 profit
               </p>
@@ -598,10 +598,10 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-[2.5rem] font-bold mb-4">
                 Choose Your Growth Plan
               </h2>
-              <p className="text-xl text-base-content/70">
+              <p className="text-lg text-base-content/70">
                 Start free, upgrade when you're ready to scale
               </p>
             </div>
@@ -690,21 +690,21 @@ export const Home = () => {
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-[2.5rem] font-bold mb-6">
               Ready to Transform Your Connections?
             </h2>
-            <p className="text-xl text-base-content/70 mb-8">
+            <p className="text-lg text-base-content/70 mb-8 max-w-xl mx-auto">
               Join {appName} today and start building meaningful relationships
               with your favorite influencers
             </p>
 
             <a
               href={isAuthenticated ? '/dashboard' : '/signup'}
-              className="btn btn-primary btn-lg text-xl px-12 group hover:scale-105 transition-transform"
+              className="btn btn-primary text-base px-6 group hover:scale-105 transition-transform"
             >
               {isAuthenticated ? 'Open Dashboard' : 'Start Free Trial'}
-              <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <p className="text-sm text-base-content/50 mt-4">
